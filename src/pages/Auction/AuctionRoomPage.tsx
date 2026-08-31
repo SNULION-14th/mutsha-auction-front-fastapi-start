@@ -78,6 +78,8 @@ function AuctionRoomPage() {
           return;
         }
 
+        // TODO(과제): data.type === "chat" 인 경우 채팅 메시지를 state 에 추가하세요.
+
         // 최신 경매 정보 방송 → state 통째로 업데이트
         if (data && data.id !== undefined) {
           console.log("실시간 경매 상태 업데이트:", data.current_price);
@@ -137,6 +139,13 @@ function AuctionRoomPage() {
     }
     setBidInput("");
   };
+
+  // TODO(과제): 실시간 채팅 구현하기
+  //  1) chatMessages / chatInput state 추가
+  //  2) ws.onmessage 에서 {type:"chat"} 수신 처리
+  //  3) handleSendChat 로 ws.send({type:"chat", message}) 전송
+  //  4) 아래 return JSX 에 채팅 패널(메시지 목록 + 입력창) 추가
+  //  힌트: 입찰과 동일한 wsRef.current 웹소켓을 그대로 재사용하면 됩니다.
 
   const isEnded = useMemo(() => {
     if (!auction?.end_time) return false;
