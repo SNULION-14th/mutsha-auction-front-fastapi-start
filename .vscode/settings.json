@@ -1,0 +1,7 @@
+{
+  "i18n-ally.sourceLanguage": "ko",
+  "i18n-ally.displayLanguage": "ko",
+  "i18n-ally.namespace": false,
+  "i18n-ally.pathMatcher": "{locale}.json",
+  "i18n-ally.localesPaths": ["src/locales"]
+}
